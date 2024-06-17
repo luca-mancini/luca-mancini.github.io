@@ -44,7 +44,8 @@ a:hover {
 } */
 
 .site-logo {
-  max-height: 150px;
+  max-height: 125px;
+  padding-top: 3vh;
 }
 
 .social-icon {
