@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
 <title>Categories | Luca Mancini</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+  
+      <link rel="stylesheet" href="/css/style.css" />
 
 
-      <script src="/js/main.js"></script>
+        <script src="/js/style.js"></script>
 
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
 
 
 <script src="https://kit.fontawesome.com/7c81af82ed.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-</head>
-<body>
 
-  <header>
+
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
     
+  </head>
+  <body>
+
+
+    <header>
 <div class="header-container">
     <div class="header-left">
-        <img src="/logo_personal_white_crop.png" alt="Luca's logo" class="site-logo">
+        <img src="/logo_personal_white_crop.png" alt="Luca's logo" class="header-logo">
     </div>
     <div class="header-center">
-        <a href="https://social.vivaldi.net/@LucaManciniDrummer" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-mastodon"></i></a>
-        <a href="https://www.lucamancini.com/catalogue/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-music"></i></a>
-        <a href="https://lucamancini.bandcamp.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
-        <a href="https://www.youtube.com/c/LucaMancini" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.instagram.com/luca.mancini.drummer/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://social.vivaldi.net/@LucaManciniDrummer" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-mastodon"></i></a>
+        <a href="https://www.lucamancini.com/catalogue/" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-music"></i></a>
+        <a href="https://lucamancini.bandcamp.com/" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
+        <a href="https://www.youtube.com/c/LucaMancini" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/luca.mancini.drummer/" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
-    <div class="header-right">
+    <div class="header-menu">
         <a href="https://www.lucamancini.com/">
         <i class="fa fa-heart"></i>
         Home 
@@ -53,39 +58,36 @@
         Contacts
         </a>
     </div>
-</div>
-  </header>
+</div></header>
 
-  <main>
-    
+    <main>
   <h1>Categories</h1>
   
   
+</main>
 
-  </main>
+    <footer><p>© 1993 - 2024 Luca Mancini</p></footer>
 
-  <footer>
-    <p>© 1993 - 2024 Luca Mancini</p>
-  </footer>
-
-  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script>
-    kofiWidgetOverlay.draw('luca_mancini_drummer', {
-      'type': 'floating-chat',
-      'floating-chat.donateButton.text': 'Buy a coffee!',
-      'floating-chat.donateButton.background-color': '#340a38',
-      'floating-chat.donateButton.text-color': '#fff'
-    });
-  </script>
-
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const player = new Plyr('#player', {
-        controls: ['play', 'progress', 'current-time', 'mute', 'volume']
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      kofiWidgetOverlay.draw("luca_mancini_drummer", {
+        type: "floating-chat",
+        "floating-chat.donateButton.text": "Buy a coffee!",
+        "floating-chat.donateButton.background-color": "#340a38",
+        "floating-chat.donateButton.text-color": "#fff",
       });
-    });
-  </script>
+    </script>
 
-</body>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const player = new Plyr("#player", {
+          controls: ["play", "progress", "current-time", "mute", "volume"],
+        });
+      });
+    </script>
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
