@@ -28,11 +28,14 @@
   <body>
 
 
-    <header>
-<div class="header-container">
+    <header><div class="header-container">
     <div class="header-left">
         <img src="/logo_personal_white_crop.png" alt="Luca's logo" class="header-logo">
     </div>
+
+    <input type="checkbox" id="sidebar-active">
+
+    <label id="overlay" for="sidebar-active"></label>
     <div class="header-center">
         <a href="https://social.vivaldi.net/@LucaManciniDrummer" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-mastodon"></i></a>
         <a href="https://www.lucamancini.com/catalogue/" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-music"></i></a>
@@ -40,7 +43,12 @@
         <a href="https://www.youtube.com/c/LucaMancini" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://www.instagram.com/luca.mancini.drummer/" class="header-social" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
+    <label id="null"></label>
+
     <div class="header-menu">
+        <label for="sidebar-active" class="close-sidebar-button">
+            <i class="fa-solid fa-square-xmark fa-2xl"></i>
+        </label>
         <a href="https://www.lucamancini.com/">
         <i class="fa fa-heart"></i>
         Home 
@@ -58,6 +66,10 @@
         Contacts
         </a>
     </div>
+
+    <label for="sidebar-active" class="open-sidebar-button">
+        <i class="fa-regular fa-square-minus fa-2xl"></i>
+    </label>
 </div></header>
 
     <main>
@@ -90,6 +102,7 @@ Mix and master by Georgi Zhelyazkov/Sinister Soundworks</p>
 </div>
 <hr>
 <div class="table">
+<div class="row-single">
 <div style="position: relative; width: 800px; height: 450px; margin: 1.5vh auto;">
   <iframe
     title="Fractala / Hypnosis - The Visual Experience"
@@ -103,6 +116,7 @@ Mix and master by Georgi Zhelyazkov/Sinister Soundworks</p>
   ></iframe>
 </div>
 
+</div>
 </div>
 
   
