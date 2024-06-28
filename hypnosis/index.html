@@ -23,10 +23,24 @@
 
 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
-    
   </head>
   <body>
+    <div id="tsparticles"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.4.0/tsparticles.bundle.min.js"></script>
+    <script type="text/javascript">
+      tsParticles
+        .load({
+          id: "tsparticles",
+          url: "/json/particles.json",
+        })
+        .then((container) => {
+          console.log("callback - tsparticles config loaded");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
 
     <header><div class="header-container">
     <div class="header-left">
@@ -101,9 +115,8 @@ Mix and master by Georgi Zhelyazkov/Sinister Soundworks</p>
 </div>
 </div>
 <hr>
-<div class="table">
 <div class="row-single">
-<div style="position: relative; width: 800px; height: 450px; margin: 1.5vh auto;">
+<div style="position: relative; padding-top: 56.25%;">
   <iframe
     title="Fractala / Hypnosis - The Visual Experience"
     width="100%"
@@ -112,11 +125,10 @@ Mix and master by Georgi Zhelyazkov/Sinister Soundworks</p>
     frameborder="0"
     allowfullscreen=""
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    style="position: absolute; inset: 0px; top:0; left: 0;"
+    style="position: absolute; inset: 0px; filter: drop-shadow(7px 7px 7px black);"
   ></iframe>
 </div>
 
-</div>
 </div>
 
   
@@ -144,8 +156,5 @@ Mix and master by Georgi Zhelyazkov/Sinister Soundworks</p>
         });
       });
     </script>
-    <div id="particles-js"></div>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>

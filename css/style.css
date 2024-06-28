@@ -1,3 +1,28 @@
+@keyframes animGrad {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 00%;
+  }
+}
+
+/* Media query to check if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #tsparticles {
+    display: none;
+  }
+  * {
+    animation: none !important; /* Disable animation */
+    transition: none !important; /* Disable transitions */
+  }
+  body {
+    background: #340a38;
+  }
+}
 .artwork-big {
   max-height: 500px;
   max-width: 95%;
@@ -33,60 +58,11 @@ html {
 
 body {
   min-height: 100vh;
-  /* background: linear-gradient(45deg, #000000, #09203f, #340a38); */
-  background: rgb(24, 24, 24);
-  /* background-size: 600% 600%; */
-
-  -webkit-animation: AnimGrad 10s ease infinite;
-  -moz-animation: AnimGrad 10s ease infinite;
-  -o-animation: AnimGrad 10s ease infinite;
-  animation: AnimGrad 10s ease infinite;
+  background: linear-gradient(45deg, #000000, #09203f, #340a38);
+  /*  background: rgb(24, 24, 24); */
+  background-size: 600% 600%;
+  animation: animGrad 10s ease infinite;
 }
-
-/* @-webkit-keyframes AnimGrad {
-  0% {
-    background-position: 99% 0%;
-  }
-  50% {
-    background-position: 2% 100%;
-  }
-  100% {
-    background-position: 99% 0%;
-  }
-}
-@-moz-keyframes AnimGrad {
-  0% {
-    background-position: 99% 0%;
-  }
-  50% {
-    background-position: 2% 100%;
-  }
-  100% {
-    background-position: 99% 0%;
-  }
-}
-@-o-keyframes AnimGrad {
-  0% {
-    background-position: 99% 0%;
-  }
-  50% {
-    background-position: 2% 100%;
-  }
-  100% {
-    background-position: 99% 0%;
-  }
-}
-@keyframes AnimGrad {
-  0% {
-    background-position: 99% 0%;
-  }
-  50% {
-    background-position: 2% 100%;
-  }
-  100% {
-    background-position: 99% 0%;
-  }
-} */
 
 header {
   margin: 1.5vh 0;
@@ -108,14 +84,6 @@ header {
 .close-sidebar-button {
   display: none;
 }
-
-/* .header-container {
-    background-color: black;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-} */
 
 .header-logo {
   max-height: 125px;
@@ -144,8 +112,9 @@ header {
 }
 
 .row-single {
-  display: flex;
-  max-width: 85%;
+  margin: auto;
+  width: 85%;
+  max-width: 1080px;
 }
 
 .row-double {
@@ -158,26 +127,7 @@ header {
 footer {
   text-align: center;
   font-size: 1.2rem;
-  margin: 5vh 0;
-}
-
-/* #particles-js {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  z-index: -1;
-} */
-
-/* Media query to check if user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #particles-js {
-    display: none;
-  }
-  * {
-    animation: none !important; /* Disable animation */
-    transition: none !important; /* Disable transitions */
-  }
+  margin: 5vh 0 8vh;
 }
 @media (max-width: 1280px) {
   .header-container {
@@ -195,14 +145,14 @@ footer {
 }
 
 @media (max-width: 850px) {
-  .header-container :nth-child(1) {
+  .header-container .header-left {
     order: 1;
     margin-bottom: 10px;
   }
-  .header-container :nth-child(4) {
+  .header-container .header-center {
     order: 3;
   }
-  .header-container :nth-child(7) {
+  .header-container .open-sidebar-button {
     order: 2;
   }
 
@@ -212,21 +162,21 @@ footer {
     /* flex-direction: column; */
   }
   .header-container a {
-    box-sizing: border-box;
+    /*     box-sizing: border-box;
     height: auto;
-    width: 100%;
-    padding: 2vw 4vw;
+    width: 100%; */
+    padding: 5vw 4vw;
   }
   .header-menu {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     right: -100%;
-    background-image: url("/hypnosis/artwork_hypnosis_comp.jpg");
-    background-color: #cccccc;
+    /*     background-image: url("/hypnosis/artwork_hypnosis_comp.jpg"); */
+    background-color: #340a38;
     opacity: 0.9;
     z-index: 10;
     width: 75%;
@@ -238,7 +188,10 @@ footer {
   .open-sidebar-button,
   .close-sidebar-button {
     display: block;
-    padding: 2vw 4vw;
+    padding: 5vw 4vw;
+  }
+  .close-sidebar-button {
+    margin-bottom: 20vw;
   }
   #sidebar-active:checked ~ .header-menu {
     right: 0;
